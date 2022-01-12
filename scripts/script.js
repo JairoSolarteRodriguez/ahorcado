@@ -41,7 +41,7 @@ function quitarVidas(i) {
     // Quita vidas cuando se equivocan de palabra 
     if(indices.length == 0){
         vidas--;
-        document.getElementById('ahorcado').innerHTML = `<img src="img/${vidas}.svg">`
+        document.getElementById('ahorcado').innerHTML = `<img src="img/${vidas}.svg" class="img-ahorcado">`
     }
 }
 

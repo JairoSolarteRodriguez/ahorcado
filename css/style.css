@@ -117,6 +117,9 @@ h2{
 
 #abc{
     margin: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #gameover{
@@ -133,6 +136,7 @@ h2{
     font-size: 1.25rem;
     text-transform: uppercase;
     margin: 0.2rem;
+    cursor: pointer;
 }
 
 #ahorcado {
@@ -140,6 +144,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 11rem;
 }
 
 /* FOOTER */
@@ -169,8 +174,12 @@ footer p{
         font-size: 1.5rem;
     }
 
+    .img-ahorcado{
+        width: 15rem;
+    }
     
-
-    
-    
+    .tecla{
+        width: 4rem;
+        height: 4rem;
+    }
 }
