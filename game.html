@@ -6,28 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
     <title>Juego del Ahorcado</title>
 </head>
 
 <body>
-    <nav>
-        
-        <h1 class="titulo">JGames</h1>
-    </nav>
+    <header>
+        <a href="./index.html">
+            <img src="./img/logo.svg" alt="Logo JGames">
+            <h1>JGames</h1>
+        </a>
+    </header>
     <main>
         <div class="contenedor">
+            <section class="seccion2">
+                <div id="ahorcado">
+                    <img src="./img/barra.svg" alt="Ahorcado">
+                </div>
+                <h1 id="gameover"></h1>
+            </section>
             <section class="seccion1">
                 <div class="contenedor__letras"></div>
                 <div id="abc"></div>
-                <h1 id="gameover"></h1>
-            </section>
-            <section class="seccion2">
-                <div id="ahorcado"></div>
             </section>
         </div>
     </main>
-
-    <script src="script.js"></script>
+    <footer>
+        <p>Creado por Jairo Valentin</p>
+    </footer>
+    <script src="./scripts/script.js"></script>
 </body>
-
 </html>

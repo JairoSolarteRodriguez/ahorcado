@@ -1,12 +1,12 @@
 // Contenedor de la palabra y palabras para el juego
 const contenedor = document.querySelector('.contenedor__letras'), // Contenedor de la palabra
-palabras = ['gato', 'juego', 'plato', 'camino', 'jirafa', 'cooperar', 'programar', 'elefante', 'camilla', 'robot', 'trofeo', 'martillo', 'esternocleidomastoideo'], // Array de palabras a encontrar
+palabras = ['gato', 'juego', 'plato', 'camino', 'jirafa', 'cooperar', 'programar', 'elefante', 'camilla', 'robot', 'trofeo', 'martillo'], // Array de palabras a encontrar
 abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'], //Abecedario para poner los botones
 contenedorAbc = document.getElementById('abc'); //Contenedor padre del teclado
 
 let palabra = palabras[Math.floor((Math.random() * palabras.length))], // Obtener palabra random de la lista
 posiciones = document.getElementsByClassName('letra'); // Recuardros de las letras
-vidas = 6,// vidas
+vidas = 7,// vidas
 aciertos = 0; // Variables de aciertos
 
 // Dibuja los botones con las letras
@@ -16,8 +16,9 @@ for(let abcedario in abc){
 
 // Dibuja las lineas en pantalla
 console.log(palabra);
+
 for(let p in palabra){
-    contenedor.innerHTML += `<div class="contenedor__letras-o letra"></div>`;
+    contenedor.innerHTML += `<div class="letra"></div>`;
 }
 
 // Presionar una tecla ejecuta esta funcion.
@@ -40,7 +41,7 @@ function quitarVidas(i) {
     // Quita vidas cuando se equivocan de palabra 
     if(indices.length == 0){
         vidas--;
-        document.getElementById('ahorcado').innerHTML = `<img src="img/${vidas}.jpg">`
+        document.getElementById('ahorcado').innerHTML = `<img src="img/${vidas}.svg">`
     }
 }
 
@@ -48,7 +49,7 @@ function quitarVidas(i) {
 function verificarVidas() {
     // Si las vidas se acaban pierde y se quita el teclado para que no agregue más letras
     if(vidas == 0){
-        document.getElementById('gameover').innerText = 'Game Over';
+        document.getElementById('gameover').innerText = 'Perdiste';
         contenedorAbc.innerHTML = null;
     }
 }
@@ -69,9 +70,10 @@ function verificarAciertos(i) {
     if(indices.length != 0){
         aciertos += indices.length;
         if(aciertos == palabra.length){ // Si los aciertos sin iguales al tamaño de la palabra gana
-            document.getElementById('gameover').innerText = 'You Win';
+            document.getElementById('gameover').innerText = 'Ganaste';
+            document.getElementById('ahorcado').innerHTML = `<img src="img/win.svg">`;
             contenedorAbc.innerHTML = null;
-            document.getElementById('ahorcado').innerHTML = null;
+            // document.getElementById('ahorcado').innerHTML = null;
         }
     }
 }
