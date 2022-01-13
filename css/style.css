@@ -30,7 +30,7 @@ header h1{
 
 main{
     background: #5C6480;
-    min-height: 69.7vh;
+    min-height: 77.6vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,13 +138,24 @@ h2{
     margin: 0.2rem;
     cursor: pointer;
 }
-
-#ahorcado {
-    padding: 1rem;
+.seccion2{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 11rem;
+}
+
+#ahorcado{
+    width: 181.7px;
+    height: 245px;
+    background-image: url('../img/fullmobile.svg');
+    /* background-position: -145px */
+    margin: 2rem;
+}
+
+.pista{
+    border: none;
+    padding: 0.5rem 1rem;
 }
 
 /* FOOTER */
@@ -181,5 +192,16 @@ footer p{
     .tecla{
         width: 4rem;
         height: 4rem;
+    }    
+}
+
+@media only screen and (min-width: 1025px) {
+    #ahorcado{
+        width: 298.15px;
+        height: 400px;
+        background-image: url('../img/Full.svg');
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        margin: 2rem;
     }
 }
